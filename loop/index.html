@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="index.css">
+
+<body>
+    <div id="app">
+ <!-- <h2 v-for="(item,i) in students" :key="item.id">
+     <span>name is {{item.name}} </span> <br/>
+     <span>age is {{item.age}} </span>
+  <hr> -->  
+<!-- 
+ </h2> -->
+ 
+ <div class="products">
+    <div v-for="item in products" :key="item.product_id" class="product">
+      <p class="id">{{ item.product_id }}</p>
+      <img :src="item.image" style="width: 100%;" height="120" />
+      <h2>{{ item.product_name }}</h2>
+      <span>{{ item.product_title }}</span>
+       
+      <div class="color-container" v-if="item.colors && item.colors.length">
+        <div v-for="(color, index) in item.colors" :key="index" :class="color"></div>
+      </div>
+      <button class="price">{{ item.price }} $ </button>
+    </div>
+  </div>
+  
+     </div>
+    
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

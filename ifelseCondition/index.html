@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+       <h3>His name is {{name}}, His age is {{age}}</h3>
+       <p v-if="age > 30">His age is greater than 30 </p>
+       <!-- <p v-show="age > 30">His age is greater than 30 </p> -->
+
+       <p v-else-if="age === 30">His age equal to 30 </p>
+       <p v-else >His age is less than 30 </p>
+       <button @click="age++" >add 1</button>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>

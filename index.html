@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <!-- two way data binding using v-model  -->
+       <div style="border: 1px solid black; background-color: grey;"> 
+         <form @submit.prevent="sendData">
+        <label for="Email">Email : </label> <br />
+        <input type="text"  v-model="email" id="Email" name="email"> <br />  
+          <label for="UserName">UserName : </label> <br />
+        <input type="text"  v-model="username" id="UserName" name="UserName"> <br />
+       <label for="Password">Password : </label> <br />
+        <input type="text"  v-model="password" id="Password" name="Password"> <br />
+        <input  type="submit" />
+    </form>
+       </div>
+
+    <label for="textinp">{{name}}</label> <br />
+    <input type="text"  v-model="name" id="textinp" name="textinp"> <br />
+    <label for="textinp2">{{city}}</label> <br />
+    <input type="text" id="textinp2" name="textinp2"> <br />
+    <button  @click="name= 'test'" > change name</button>
+        <!-- <h1> My name is {{name }}</h1>
+        <h2> {{ sayHi("Morning") }}</h2>
+        <h3> {{sayTest()}}</h3>
+        <a v-bind:href="link" >google</a> -->
+        <!-- <a :href="link" >google</a> -->
+        <!-- <img  v-bind:src="" /> -->
+        <h2>Number is {{number}} </h2>
+    
+        <button v-on:click="sum"> Click Me !  </button>
+        <!-- <button @click="sum"> Click Me !  </button> -->
+             <a href="#" @click.once="testme">link</a>
+    <button v-on:keyup="printMyname">keyup</button>
+     <!-- <a href="httkeyupps://www.google.com" @click.prevent>link</a> -->
+        <!-- <button v-on:dblclick="testdbl"> Click Me !  </button> -->
+
+
+
+    <!-- <form  action="" @submit.prevent>
+        modifier like preventDefault and  click.once 
+        //one time execution once       
+
+
+    </form> -->
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>
